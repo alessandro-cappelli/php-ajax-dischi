@@ -65,6 +65,36 @@ $database = [
             </div>
         </div>
     </header>
+
+    <main>
+        <?php 
+            foreach ($database as $key => $element) {
+                echo '<div class="container">';
+                    echo '<div class="row row-cols-5">';
+                        echo '<div class="col mb-3">';
+                            echo '<div>';
+                                echo '<div>';
+                                    echo '<img src="'.$element["poster"].'"/>';
+                                echo '</div>';
+
+                                echo '<div>';
+                                    echo "<div>".$element["title"]."</div>";
+                                echo '</div>';
+
+                                echo '<div>';
+                                    echo "<div>".$element["author"]."</div>";
+                                echo '</div>';
+
+                                echo '<div';
+                                    echo "<div>".$element["year"]."</div>";
+                                echo '</div>';
+                            echo '</div>';
+                        echo '</div>';
+                    echo '</div>';
+                echo '</div>';
+            }    
+        ?>
+    </main>
     
 </body>
 </html>
